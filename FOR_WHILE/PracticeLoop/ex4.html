@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const number = parseInt(prompt('Enter the number of terms: '));
+        let a = 0, b = 1, c;
+        document.write('Fibonacci Series:' + "<br>");       
+
+        for (let i = 1; i <= number; i++) {
+            document.write(a + "<br>");
+            c = a + b;
+            a = b;
+            b = c;
+      
+        if (a % 5 == 0){            
+            document.write(a + " là số chia hết cho 5.");
+            break;
+        }
+    }
+    </script>
+</body>
+</html>

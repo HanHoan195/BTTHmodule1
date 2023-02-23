@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng tam giác dưới phải</title>
+</head>
+
+<body>
+    <script>
+        let matrix = [
+            [3, 1, 5, 4],
+            [2, 7, 1, 8],
+            [3, 5, 1, 6],
+            [1, 2, 1, 2]
+        ]
+        let sum = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (j = i; j < j+1; j++) {
+                sum += matrix[i][j];
+            }
+        } document.write(sum);
+    </script>
+</body>
+
+</html>

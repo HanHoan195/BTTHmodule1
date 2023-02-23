@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CACULATOR</title>
+</head>
+<body>
+    <h2>CACULATOR</h2>
+   <table>
+        <tr>
+            <th>
+                <input type="num" id="sothunhat">
+            </th>
+            <th>
+                <input type="num" id="sothuhai">
+            </th>
+        </tr>
+    </table>
+    <button type="button" onclick="Add()">Addition(+)</button>
+    <button onclick="Sub()">Subtraction(-)</button>
+    <button onclick="Mul()">Multiplication(*)</button>
+    <button onclick="Div()">Division(/)</button>
+    <div id="cong"></div>
+    
+    <script>
+        function Add(){
+            let number1 = document.getElementById("sothunhat").value;
+            let number2 = document.getElementById("sothuhai").value;         
+
+            document.getElementById("cong").innerHTML = "Addition: " + (Number(number1)+Number(number2));
+        }
+        function Sub(){
+            let number1 = document.getElementById("sothunhat").value;
+            let number2 = document.getElementById("sothuhai").value;         
+
+            document.getElementById("cong").innerHTML = "Subtraction: " + (Number(number1)-Number(number2));
+        }
+        function Mul(){
+            let number1 = document.getElementById("sothunhat").value;
+            let number2 = document.getElementById("sothuhai").value;         
+
+            document.getElementById("cong").innerHTML = "Multiplication: " + (Number(number1)*Number(number2));
+        }
+        function Div(){
+            let number1 = document.getElementById("sothunhat").value;
+            let number2 = document.getElementById("sothuhai").value;         
+
+            document.getElementById("cong").innerHTML = "Division: " + (Number(number1)/Number(number2));
+        }
+    </script>
+</body>
+</html> 

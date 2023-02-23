@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICTIONARY</title>
+</head>
+
+<body>
+    <h4>Nhập nội dung tiếng anh cần dịch:</h4>
+    <p>("Computer", "Mouse", "Keyboard")</p>
+    <input type="text" id="string">
+    <input type="button" value="TRANSLATE" onclick="trans()">
+    <h4 id="result"></h4>
+    <script>
+        function trans() {
+            let vietnamese = ["Máy tính", "Con chuột", "Bàn phím"];
+            let english = ["Computer", "Mouse", "Keyboard"];
+            let index_eng = 0;
+            let result = "";
+            let string = document.getElementById("string").value;
+            for (let i = 0; i < english.length; i++) {
+                if (string == english[i]) {
+                    index_eng = i;
+                    for (let j = 0; j < vietnamese.length; j++) {
+                        if (index_eng == j) {
+                            result = vietnamese[j];
+                        } 
+                    }
+                }
+            } document.getElementById("result").innerHTML = result;
+        }
+
+
+    </script>
+</body>
+
+</html>

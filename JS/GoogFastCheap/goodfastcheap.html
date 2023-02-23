@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOD-FAST-CHEAP</title>
+    <style>
+        input {
+            width: 80px;
+            height: 40px;
+            text-size-adjust: 40px;
+            appearance: none;
+            background-color: slategray;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: 0.5s;
+            position: relative;
+        }
+
+        input:checked[type="checkbox"] {
+            background-color: rgb(71, 197, 235);
+        }
+
+        input::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 20px;
+            transform: scale(1.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+        }
+
+        input:checked::before {
+            left: 40px;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+            position: static;
+
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <input onclick="click1()" type="checkbox" value="good" id="good"><span>GOOD</span> </input> <br>
+        <input onclick="click1()" type="checkbox" value="fast" id="fast"><span>FAST</span> </input> <br>
+        <input onclick="click1()" type="checkbox" value="cheap" id="cheap"><span>CHEAP</span> </input> <br>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

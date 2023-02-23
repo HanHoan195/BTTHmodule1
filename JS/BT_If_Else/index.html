@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="bacluong"></p>
+<body>
+    <script>
+        let luong = prompt("Nhập vào lương của bạn:");
+         parseFloat(luong)
+        //  Chỉ sử dụng if
+        // if (luong <= 5) {
+        //     kq = "Bậc 1.";            
+        // };
+        // if (5 < luong && luong <= 10) {
+        //         kq = "Bậc 2.";
+        // };
+        // if (10 < luong && luong <= 18) {
+        //         kq = "Bậc 3.";
+        // };
+        // if (18 < luong && luong <= 32) {
+        //     kq = "Bậc 4.";
+        // };
+        // if (32 < luong && luong <= 52) {
+        //     kq = "Bậc 5.";
+        // };
+        // if (52 < luong && luong <= 80) {
+        //     kq = "Bậc 6.";
+        // };
+        // if (80 < luong) {
+        //     kq = "Bậc 7.";
+        // };
+
+
+        // if_else
+
+        if (luong <= 5) {
+            kq = "Bậc 1.";        
+        } else if (luong <=10) {
+            kq = "Bậc 2."
+        } else if (luong <=18) {
+            kq = "Bậc 3."
+        } else if (luong <=32) {
+            kq = "Bậc 4."
+        } else if (luong <=52) {
+            kq = "Bậc 5."
+        } else if (luong <=80) {
+            kq = "Bậc 6."
+        } else if (80 < luong ) {
+            kq = "Bậc 7."
+        }
+
+    //     if (luong <= 5) {
+    //         kq = "Bậc 1.";
+    //         if (luong <=10) {
+    //             kq = "Bậc 2.";
+    //             if (luong <= 18) {
+    //                 kq = "Bậc 3.";
+    //                 if (luong <= 32) {
+    //                     kq = "Bậc 4.";
+    //                     if (luong <= 52) {
+    //                         kq = "Bậc 5";
+    //                         if (luong <= 80) {
+    //                             kq = "Bậc 6."; 
+                                                     
+    //                     } else (luong) {
+    //                              kq = "Bậc 7";
+    //                         }
+    //                 }
+    //             }
+    //         }
+    //     }    
+    // } 
+
+              
+        document.getElementById("bacluong").innerHTML = kq 
+
+    </script>
+</body>
+
+</html>

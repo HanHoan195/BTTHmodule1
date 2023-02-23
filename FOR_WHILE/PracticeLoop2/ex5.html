@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let moNey = prompt("Nhập số tiền ban đầu:");
+let month = prompt("Nhập số tháng:");
+let interestRate = prompt("Nhập lãi suất:");
+for (i = 1; i <= 12; i++){
+    let total = moNey * month * interestRate;
+    document.write( "Lãi " + month + " tháng : " + total);
+    break;
+}
+    </script>
+</body>
+</html>

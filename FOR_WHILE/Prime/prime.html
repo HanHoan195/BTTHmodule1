@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+            let number = parseInt(prompt("NHập số lượng số nguyên tố cần in ra:"));
+            let count = 0
+            let countSNT = 0
+            for (let N = 2; N < 1000; N++) {
+                if (countSNT < number) {
+                    for (let i = 1; i <= N; i++) {
+                        if (N % i == 0) {
+                            count += 1;
+                        }
+                    }
+                    if (count == 2) {
+                        document.write(N + "<br>");
+                        countSNT += 1
+                    }
+                    count = 0;
+                } else {
+                    break;
+                }
+            }
+       
+    </script>
+</body>
+
+</html>

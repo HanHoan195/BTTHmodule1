@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra tam giác</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("Nhập giá trị cạnh a:");
+        let b = +prompt("Nhập giá trị cạnh b:");
+        let c = +prompt("Nhập giá trị cạnh c:");
+        if (a > 0 && b > 0 && c > 0) {
+            if ((a + b > c) && (b + c > a) && (a + c > b)) {
+                document.write("Đây là các cạnh tam giác");
+            } else {
+                document.write("Đây không phải là các cạnh tam giác");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <script>
+        let caoAp = 130;
+let chuDien = 30;
+switch (true) {
+    case caoAp <= 6:
+        alert("Tiền điện là: " + chuDien * 1500);        
+        break;
+        case caoAp <= 22:
+            alert("Tiền điện là: " + chuDien * 1600);
+            break;
+            case caoAp <= 110:
+                alert("Tiền điện là: " + chuDien * 1700);
+                break;
+                case caoAp > 110:
+                    alert("Tiền điện là: " + chuDien * 1800)
+
+    default:
+        break;
+}
+
+    </script>
+</body>
+</html>

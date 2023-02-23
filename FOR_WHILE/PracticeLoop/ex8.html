@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>GAME: Hãy thử đoán xem</h3>
+    <h5>Bạn có 3 lượt chơi.</h5>
+    <button id="game" type="button" onclick="play()">PLay</button>
+<script>
+    function play(){
+        let numBer = +prompt("Bạn muốn đoán trong khoảng bao nhiêu?");
+        let systemNumber = Math.floor(Math.random() * numBer);
+        console.log(systemNumber);
+        let numberCheck = +prompt("Nhập số bạn đoán:");
+        let count = 0 ;
+        while (numberCheck !== systemNumber) {
+            count++;
+            if (count == 3){
+                alert("Bạn đã hết lượt");
+                break;
+            } if (numberCheck == systemNumber){
+                alert("Chúc mừng bạn đã đúng!!");
+            } if (numberCheck > systemNumber){
+                alert("Số bạn đoán lớn hơn!");
+                alert(+prompt("Nhập số bạn đoán:"));
+            } else {
+                alert("Số bạn đoán nhỏ hơn.");
+                alert(+prompt("Nhập số bạn đoán:"))
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
