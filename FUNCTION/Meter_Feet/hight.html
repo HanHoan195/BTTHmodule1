@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METER-FEET</title>
+</head>
+<body>
+    <p>Meter:<input type="number" oninput="changeLenght(this.value)" onchange="changeLenght(this.value)"></p>
+    <p>Feet: <span id="outputFeet"></span></p><br>
+
+    <p>Feet:<input type="number" oninput="changeMeter(this.value)" onchange="changeMeter(this.value)"></p>
+    <p>Meter: <span id="outputMeter"></span></p> 
+    
+    <script>
+        function changeLenght(num){
+            num = parseFloat(num);
+            document.getElementById("outputFeet").innerHTML = num * 0.305;
+        }
+        function changeMeter(num){
+            num = parseFloat(num);
+            document.getElementById("outputMeter").innerHTML = num * 3.279;
+        }
+    </script>
+</body>
+</html>
