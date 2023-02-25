@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <p>Chu vi: <span id="P"></span></p>
+    <p>Diện tích <span  id="S"></span></p>
+    <script>
+        let r = +prompt("Nhập r:")
+        function diameterCircle() {
+            return 2 * 3.14 * r;
+        }
+        document.getElementById("P").innerHTML = diameterCircle(r);
+        function circleArea() {
+            return 3.14 * (r*r);
+        }
+        document.getElementById("S").innerHTML = circleArea(r);
+    </script>
+</body> 
+
+</html>
