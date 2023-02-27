@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<body>
+    <canvas id="canva" width="800px" height="400px" style="border: 1 solid #c3c3c3;"></canvas>
+    <button type="button" onclick="handleRandomClick()">Random</button>
+    <button type="button" onclick="handleArea()">Get Area</button>
+    <button type="button" onclick="handlePerimeter()">Get ChuVi</button>
+    <button type="button" onclick="changeColor()">Change Color</button>
+    <button type="button" onclick="doubleSize()">X2 Size</button>
+    <script>
+        function Rectangle(height, width){
+            this.height = height;
+            this.width = width;
+
+            this.getHeight = function(){
+                return this.height;
+            }
+            this.getWidth = function(){
+                return this.width;
+            }
+            this.setHeight = function(height){
+                this.height = height;
+            }
+            this.setWidth = function(width){
+                this.width = width;
+            }
+
+            this.getArea = function(){
+                return this.width*this.height;
+            }
+            this.getChuvi = function(){
+                return (this.width + this.height) * 2;
+            }
+            this.X2Size = function(){
+                return ((this.width*this.height) * 2);
+            }
+        }
+
+        let rectangle = new Rectangle(100, 300);
+        let ctx = document.getElementById("canva").getContext("2d");
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function drawRectangle(color){
+            let width = rectangle.width;
+            let height = rectangle.height;
+
+
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            ctx.fillStyle = color;
+            ctx.fillRect(30, 30, width, height);
+            
+
+            
+        }
+        // /drawRectangle();
+
+        function handleRandomClick(){
+            
+            let w =  Math.random()*200;
+            let h = Math.random()*100;
+            rectangle.setHeight(w);
+            rectangle.setWidth(h);
+            console.log(`Gia tri w : ${w} h: ${h}`);
+            drawRectangle("#FF0000");
+            
+        }
+        function handleArea(){
+            alert(Math.round(rectangle.getArea()));
+        }
+        function handlePerimeter(){
+            alert(Math.round(rectangle.getChuvi()));
+        }
+        function doubleSize(){
+            alert(Math.round(rectangle.X2Size()));
+        }
+        function changeColor(){
+            let color = getRandomColor();
+            drawRectangle(color)
+        }
+    </script>
+</body>
+</html>
